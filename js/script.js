@@ -1,15 +1,8 @@
 let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-
     let modal = document.querySelector('.modal');
-
-
-
-    // let modalContainer = document.querySelector('#modal-container');
     let dialogPromiseReject;
-
-
 
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -22,7 +15,6 @@ let pokemonRepository = (function () {
         let pokemonList = document.querySelector(".pokemon-list");
         let listpokemon = document.createElement("li");
         listpokemon.classList.add('col-12', 'col-md-4', 'mb-2');
-
         let button = document.createElement('button');
         button.innerText = capitalizeFirstLetter(pokemon.name);
         button.classList.add('btn', 'btn-primary', 'btn-block', 'btn-lg', 'w-100', 'mb-3');
